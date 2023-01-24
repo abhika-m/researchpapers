@@ -1,4 +1,4 @@
-# COORA H2Labs Paper Summary
+# CORA H2Labs Paper Summary
 
 ## What
 ["One Question Answering Model for Many Languages
