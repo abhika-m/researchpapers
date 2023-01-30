@@ -21,4 +21,4 @@ Knowledge generation, while helpful when it comes to accuracy, will add some tim
 ## Future Possibilties
 This method can be used to all existing QA models to further improve them. In some cases, accuracy becomes very important. Consider a situation where you need to call emergency services in a foreign country and you don't know the number to dial. You can use a QA system like Siri to quickly ask what the emergency services number is and in this case you would want accurate results the first time around.
 
-All in all, continuously finding ways to better QA models is very important especially with the increasing popularity of question answering (take ChatGPT for exaple).
+All in all, continuously finding ways to better QA models is very important especially with the increasing popularity of question answering (take ChatGPT for example).
