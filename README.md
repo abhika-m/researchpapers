@@ -1,5 +1,5 @@
 # Research Papers 
-A collection of summaries of recent research papers + articles I have read and my understanding of them. Click on the links for a short summary!
+A collection of summaries of recent research papers + articles I have read and my understanding of them. These papers are mostly in the domain of Natural Language Processing. Click on the links for a short summary!
 
 |Research Paper|Short Description|
 |-|-|
