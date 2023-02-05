@@ -1,4 +1,4 @@
-# Delphi Experiment Summary
+# Red Teaming Language Models to Reduce Harms Summary
 
 ## What
 ["Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned"](https://arxiv.org/pdf/2209.07858.pdf) explains the process of red teaming to alter language models to reduce harmful results. Red teaming is the act of either manually or automatically provoking models to return offensive or harmful results and then updating the model to not return that. This paper uses four different models and a team of red teaming members to actively produce harmful results and prevent models from doing that in the future.
