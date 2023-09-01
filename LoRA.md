@@ -1,7 +1,7 @@
 # LoRA Paper Summary
 
 ## What
-["LORA: LOW-RANK ADAPTATION OF LARGE LANGUAGE MODELS"](https://arxiv.org/pdf/2106.09685.pdf) is a method proposed to make training more efficient in terms of cost, time, and memory. It is essentially tackling an optimization task on finetuning.
+["LoRA: Low-Rank Adaptation of Large Language Models"](https://arxiv.org/pdf/2106.09685.pdf) is a method proposed to make training more efficient in terms of cost, time, and memory. It is essentially tackling an optimization task on finetuning.
 ## How
 At the most basic level, the process of training is simply a method of updating weights or parameters of a base model until it does well on a desired task. So there are some initial weights W<sub>0</sub> which are used to predict model outputs. When you train a model, these weights are updated by some &Delta;W: W<sub>0</sub> += W. Usually, &Delta;W is the same dimension as W<sub>0</sub> and so calculating &Delta;W can be very time and memory consuming.
 
