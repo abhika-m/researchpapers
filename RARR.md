@@ -1,4 +1,4 @@
-# LoRA Paper Summary
+# RARR Paper Summary
 
 ## What
 ["RARR: Researching and Revising What Language Models Say,
