@@ -10,3 +10,4 @@ A collection of summaries of recent research papers + articles I have read and m
 |[Red Teaming](https://github.com/abhika-m/researchpapers/blob/main/RedTeaming.md)|Incorporating red teaming efforts (purposefully producing harmful results to update models to prevent that from happening again) to reduce harmful and offensive responses by AI assistants
 |[PURR](https://github.com/abhika-m/researchpapers/blob/main/PURR.md)|Explores editing hallucinations in large language model outputs through using a synthetic corrupted dataset
 |[LoRA](https://github.com/abhika-m/researchpapers/blob/main/LoRA.md)|Describes a method to make fine tuning more efficient by using lower ranks to update model weights rather than updating all parameters in models, especially useful when finetuning large models
+|[RARR](https://github.com/abhika-m/researchpapers/blob/main/RARR.md)|Focuses on improving trushtworthiness of large language models through the process of revision
