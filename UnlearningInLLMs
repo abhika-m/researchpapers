@@ -1,0 +1,21 @@
+# Unlearning in LLMs Paper Summary
+
+## What
+["Who’s Harry Potter? Approximate Unlearning in LLMs"](https://browse.arxiv.org/pdf/2310.02238.pdf) tackles the very interesting problem of unlearning in a model. Unlearning is exactly what it sounds like, it's trying to make a language model forget information which it is already trained on.
+
+This paper tries and combines multiple approaches to unlearning and keeps a focus on making the model unlearn what it knows about the Harry Potter series. So ultimately, when the model is prompted with something like "Harry's best friends were", the model should not return "Hermione and Ron" but instead should return something more generic like "Josh and Sally". This requires reducing the probability of the next tokens to be "Ron" or "Hermione" and hence is a targeted unlearning. 
+
+One approach this paper takes to this targeting unlearning is reinforcement bootstrapping. The main purpose of this is to understand which aspects of the model (such as vector logits) lead to choosing "Hermione" or "Ron" in the example above. For this, we need to know what tokens a generic baseline model would be inclined to return and what tokens a reinforced model (model with deeper info on Harry Potter) would be inclined to return. Then, we find the exact logits which lead to this deeper knowledge of Harry Potter through some calculations and create a new generic vector to use instead of the reinforced one.
+
+The other approach in this paper is to anchor different terms to Harry Potter specific terms. In the paper, GPT4 was used to extract entities within the unlearn target and map them to a new entity. So for example, "Hermione" can be mapped to "Sarah". Then the model is updated so that wherever "Hermione" shows up, the model replaces it with "Sarah".
+
+These approaches on their own can be inconsistent but combining them seems to solve consistinecy issues.
+
+## Why
+There can be instances where mistakes were prevalent in training data. In these cases, retraining an entire model on a new set of data can be very costly and time consuming so unlearning can be more efficient. As mentioned in the paper, as opposed to the 184k GPU hours spent to pretrain the model, unlearning Harry Potter only took 1 GPU hour. Additionally, unlearning can be used in reducing bias among LLMs by making LLMs unlearn stereotypes which are so heavily present in the training data.
+
+## Considerations
+While this works great with targeted unlearning, there should be time spent finding ways in scaling the unlearning process to larger targets. Additionally, unlearning in one context can often affect results in a different context. For example, if our targeted unlearning is focused solely on the question "Who is Harry's best friend" and we manage to make the model forget that Harry's best friend is Ron, this can also impact the outcome of "Who is Ron's best friend" even if we don't want it to. We need to be careful with how unlearning in one area can impact other areas.
+
+## Future Possibilties
+Unlearning is one part of fixing mistakes within LLMs but another direction can look into how to edit LLMs. Currently there is no easy to way to quickly edit an LLM or add data to an LLM without fully retraining. Looking into how we can easily add data to a model or delete a part of a model can be a really interesting project and super useful.
